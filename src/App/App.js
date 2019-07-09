@@ -15,20 +15,20 @@ import './App.scss';
 
 import fbConnection from '../helpers/data/connections';
 
+fbConnection();
+
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === false
     ? (<Component {...props} />)
-    : (<Redirect to={{ pathName: '/home', state: { from: props.location } }} />)
+    : (<Redirect to={{ pathname: '/home', state: { from: props.location } }} />)
   );
   return <Route {...rest} render={props => routeChecker(props)} />;
 };
 
-fbConnection();
-
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
-  const routeChecker = props => (authed === false
+  const routeChecker = props => (authed === true
     ? (<Component {...props} />)
-    : (<Redirect to={{ pathName: '/home', state: { from: props.location } }} />)
+    : (<Redirect to={{ pathname: '/auth', state: { from: props.location } }} />)
   );
   return <Route {...rest} render={props => routeChecker(props)} />;
 };
@@ -66,7 +66,7 @@ class App extends React.Component {
                <Switch>
                  <PublicRoute path='/auth' component={Auth} authed={authed}/>
                  <PrivateRoute path='/home' component={Home} authed={authed} />
-                 <Redirect from="*" to="/authed" />
+                 <Redirect from="*" to="/auth" />
                </Switch>
              </div>
            </div>

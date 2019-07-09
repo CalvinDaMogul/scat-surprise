@@ -1,0 +1,49 @@
+{
+   "scats": {
+       "scat1": {
+          "location": "Downtown",
+          "weight": "12g",
+          "color": "brown",
+          "sampleName": "Toxic Sample #1",
+          "animal": "Michael",
+          "uid": "LjKg1Mk9mxfQN5zDNnEeD7YX5Mg2"
+       },
+
+       "scat2": {
+          "location": "NSS",
+          "weight": "18g",
+          "color": "brown",
+          "sampleName": "Toxic Sample #2",
+          "animal": "Leroy",
+          "uid": "LjKg1Mk9mxfQN5zDNnEeD7YX5Mg2"
+       },
+
+       "scat3": {
+          "location": "Stankonia",
+          "weight": "12g",
+          "color": "brown",
+          "sampleName": "Toxic Sample #3",
+          "animal": "Michael",
+          "uid": "LjKg1Mk9mxfQN5zDNnEeD7YX5Mg2"
+       },
+
+       "scat4": {
+          "location": "Out East",
+          "weight": "12g",
+          "color": "brown",
+          "sampleName": "Toxic Sample #4",
+          "animal": "Jerome",
+          "uid": "12354"
+       },
+
+       "scat5": {
+          "location": "The Nations",
+          "weight": "30g",
+          "color": "brown",
+          "sampleName": "Toxic Sample #5",
+          "animal": "Carl",
+          "uid": "3456"
+       }
+
+   }
+}
